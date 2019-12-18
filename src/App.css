@@ -1,0 +1,29 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: lightgrey;
+  /* font-size: 36px; */
+  /* font-weight: lighter; */
+}
+
+.eqform {
+  background-color: black;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  padding: 50px;
+  border-radius: 6px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0.1em;
+  margin-bottom: 1.5em;
+}
+h5 {
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+}

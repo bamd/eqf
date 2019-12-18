@@ -1,0 +1,1 @@
+export const SCRIPT_URL = "https://script.google.com/a/insurancerevolution.co.uk/macros/s/AKfycbzwNyEVgoOymQzhe4Xj0aCzE5ulyp6ertWmyWgcBQ/exec";
