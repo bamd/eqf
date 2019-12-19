@@ -1,5 +1,5 @@
 import React from 'react';
-import Results from './Results';
+import Results from './Components/ResultsPage';
 import './App.css';
 
 function App() {

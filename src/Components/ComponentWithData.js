@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fetchJsonp from 'fetch-jsonp';
-import {SCRIPT_URL} from './const.js'
+import { Spinner } from 'reactstrap';
+import {SCRIPT_URL} from '../const.js';
 
 export class ComponentWithData extends Component {
 
@@ -23,7 +24,7 @@ export class ComponentWithData extends Component {
     }
 
     renderLoading(){
-        return <div>loading please wait</div>
+        return <div id="spinner"><Spinner style={{ width: '10rem', height: '10rem' }} color="danger" /></div>
     }
     renderError(){
         //todo be more specific 
