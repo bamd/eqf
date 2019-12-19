@@ -14,7 +14,11 @@ class Results extends ComponentWithData {
              advisor: 'All'
          }
 
-        }
+    }
+
+    handleChange = (event) => {
+        this.setState({ advisor: event.target.value });
+    }    
 
     render() {
         if(this.state.error) return this.renderError();
@@ -46,23 +50,25 @@ class Results extends ComponentWithData {
                 <td>{item.advisor}</td>
                 <td>{item.audit_comments}</td>
                 <td>{item.fail_text}</td>
+                <td>{((item.pass.split('", "').length / (item.pass.split('", "').length + item.fail.split('", "').length)) * 100).toFixed(2)}%</td>
             </tr>
         ));
 
         return (
                 <div>
                     <div id="advisordiv">
-                        <select id="advisors">
+                        <select id="advisors" onChange={this.handleChange}>
                         <option value="choose" disabled selected>Choose an Advisor</option>
                         {advisor}
                     </select>
                 </div>
                 <Table dark bordered hover striped size="m">
                     <thead><tr>
-                        <th>Policy Ref</th>
-                        <th>Advisor</th>
-                        <th>Comments</th>
-                        <th>Fail Areas(Number of Occurrences</th>
+                        <th style={{width: '10%'}}>Policy Ref</th>
+                        <th style={{width: '10%'}}>Advisor</th>
+                        <th style={{width: '30%'}}>Comments</th>
+                        <th style={{width: '30%'}}>Fail Areas(Number of Occurrences</th>
+                        <th style={{width: '20%'}}>EQ Score</th>
                     </tr></thead>
                     <tbody>
                         {results}
